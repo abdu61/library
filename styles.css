@@ -1,0 +1,80 @@
+:root{
+    --headerFontSize: 2.2rem;
+    --headerBorderRadius: 0.9rem;
+    --primaryBackground: #e4e8e9;
+
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    height: 100dvh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    height: 100dvh;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.8rem 1.6rem;
+}
+
+header h1{
+    margin: 0;
+    padding: 0;
+    font-size: var(--headerFontSize);
+}
+
+.search{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.search input{
+    flex: 1;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: var(--primaryBackground);
+    border-radius: var(--headerBorderRadius);
+    font-size: 1.2rem;
+    width: 80%;
+    max-width: 500px;
+}
+
+#searchButton{
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+#searchButton span{
+    font-size: var(--headerFontSize);
+}
+
+#logIn{
+    padding: 0.8rem 2rem;
+    border: none;
+    background-color: var(--primaryBackground);
+    border-radius: var(--headerBorderRadius);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main{
+    background-color: var(--primaryBackground);
+}
