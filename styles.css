@@ -2,6 +2,7 @@
     --headerFontSize: 2.2rem;
     --headerBorderRadius: 0.9rem;
     --primaryBackground: #e4e8e9;
+    --secondaryBackground: #ffffff;
 
 }
 
@@ -77,4 +78,222 @@ header h1{
 
 main{
     background-color: var(--primaryBackground);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
 }
+
+.bookMenu{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.bookMenu button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #000000;
+    background-color: var(--secondaryBackground);
+    border-radius: var(--headerBorderRadius);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.bookMenu button span{
+    font-size: 1.6rem;
+}
+
+.bookMenu button:hover{
+    background-color: #000000;
+    color: var(--secondaryBackground);
+}
+
+.bookContent{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.bookCard{
+    display: grid;;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    max-height: 350px;
+    background-color: var(--secondaryBackground);
+    border-radius: var(--headerBorderRadius);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.bookCard h2, .bookCard p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.bookCard h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.bookCard p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.bookCard button{
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: #ff6c6c;
+    border-radius: var(--headerBorderRadius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bookCard button:hover{
+    background-color: #FF0000;
+    color: var(--secondaryBackground);
+}
+
+.bookCard .toggle-read-button{
+    background-color: var(--primaryBackground)
+}
+
+.bookCard .toggle-read-button:hover{
+    background-color: #0066ff;
+    color: var(--secondaryBackground);
+}
+
+.readStatus {
+    color: red;
+}
+
+.readStatus.read {
+    color: green;
+}
+
+
+
+
+/* Book Modal */
+
+.modalContainer{
+    position: relative;
+}
+
+
+.modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: 1s ease-in-out;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondaryBackground);
+    padding: 1rem 2rem;
+    padding-bottom: 2.5rem;
+    border-radius: 0.9rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: 1s ease-in-out;
+}
+
+.modalContent{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}
+
+.modalContent span{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modalContent span:hover{
+    color: #ff0000;
+}
+
+#addBookForm{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1.2rem;
+}
+
+.inputStyle{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputStyle label{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0rem 0.9rem;
+}
+
+.inputStyle > input[type="text"], .inputStyle > input[type="number"]{
+    min-width: 250px;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: var(--primaryBackground);
+    border-radius: var(--headerBorderRadius);
+    font-size: 1rem;
+}
+
+.inputStyle > .checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.inputStyle > .checkbox label{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0rem 0.9rem;
+}
+
+.inputStyle .checkbox input[type="checkbox"]{
+    width: 1.3rem;
+    height: 1.3rem;
+    outline-offset: -2px;
+    outline: 2px solid var(--primaryBackground);
+    border-radius: var(--headerBorderRadius);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]{
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: var(--primaryBackground);
+    border-radius: var(--headerBorderRadius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #000000;
+    color: var(--secondaryBackground);
+}
+
+
