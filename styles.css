@@ -6,17 +6,12 @@
 
 }
 
-html, body{
+html, body, .container{
     margin: 0;
     padding: 0;
     height: 100vh;
     height: 100dvh;
     font-family: 'Poppins', sans-serif;
-}
-
-.container{
-    height: 100vh;
-    height: 100dvh;
 }
 
 .container{
@@ -76,6 +71,7 @@ header h1{
     font-weight: 600;
 }
 
+
 main{
     background-color: var(--primaryBackground);
     padding: 1.5rem;
@@ -116,7 +112,7 @@ main{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: auto;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
 }
 
