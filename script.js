@@ -1,4 +1,18 @@
-const myLibrary = [];
+let myLibrary = [];
+
+// Load the book data from localStorage when the page is loaded
+if (localStorage.getItem('myLibrary')) {
+    myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+} else {
+    myLibrary = [];
+}
+
+// Load the book data from localStorage when the page is loaded
+if (localStorage.getItem('myLibrary')) {
+    myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+} else {
+    myLibrary = [];
+}
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -10,6 +24,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
     const book = new Book(title, author, pages, read);
     myLibrary.push(book);
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary)); // Save the book data to localStorage
 }
 
 function removeBookFromLibrary(title) {
@@ -19,6 +34,7 @@ function removeBookFromLibrary(title) {
             break;
         }
     }
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary)); 
 }
 
 function displayBooks() {
@@ -74,7 +90,6 @@ span.onclick = function() {
     modalOverlay.style.display = "none";
 }
 
-addBookToLibrary('Eg. book', 'author', 1, true);
 displayBooks();
 
 
